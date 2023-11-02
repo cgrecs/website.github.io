@@ -1,0 +1,668 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+
+#header-container {
+  display: flex;
+  align-items: center;
+  margin-left: 10%;
+}
+
+.headermain {
+  text-align: center;
+  font-family: 'Silkscreen', cursive;
+}
+
+.banner {
+  max-width: 100%;
+  height: 95vh;
+  margin-left: 13%;
+  margin-top: 13%;
+
+}
+
+/* Change color when hovering */
+h1:hover {
+  color: orangered;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+
+
+h2 {
+  text-align: center;
+  font-family: 'Silkscreen', cursive;
+  color: white;
+}
+
+.black-text {
+  color: black;
+}
+
+h2:hover {
+  color: orangered;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.glow {
+  font-size: 80px;
+  color: #fff;
+  text-align: center;
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+
+
+/* Navbar styles - center it */
+.navbar {
+
+  overflow: hidden;
+  background-color: black;
+  font-family: 'Silkscreen', cursive;
+  margin-right: auto;
+  margin-left: auto;
+  display: flex;
+  flex-wrap: wrap;
+  
+  ;
+  
+}
+
+/* Links inside the navbar */
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  padding: 14px 16px;
+}
+
+@media (max-width: 768px) {
+  .navbar a {
+    padding: 12px 14px;
+    /* reduced padding for mobile */
+  }
+}
+
+/* The dropdown container */
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+/* Dropdown button */
+.dropdown .dropbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+  
+}
+
+/* Add a red background color to navbar links on hover */
+.navbar a:hover,
+.dropdown:hover .dropbtn {
+  background-color: orangered;
+}
+
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 2;
+ 
+}
+
+
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: orangered;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.imageformat {
+  width: 100%;
+  height: auto;
+}
+
+/* Container for flexboxes */
+.row {
+  display: flex;
+  flex-direction: column; /* Columns will stack on smaller screens */
+  margin-bottom: 20px;
+  font-family: 'Silkscreen', cursive;
+}
+
+/* Columns */
+.column {
+  align-items: center;
+  padding: 10px;
+  margin: 10px 0;
+  height: auto;
+  border-radius: 7px;
+  background-color: black;
+  font-family: 'Silkscreen', cursive;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+@media (min-width: 768px) {
+  .row {
+    flex-direction: row; /* Columns will sit next to each other on larger screens */
+  }
+
+  .column {
+    flex: 1; /* Columns will share space equally */
+    margin: 5px;
+  }
+}
+
+/* Additional styles */
+.col1,
+.col2,
+.col3 {
+  margin-left: 10px;
+  margin-top: 40%;
+  margin-bottom: 500px;
+  font-family: 'Silkscreen', cursive;
+}
+
+.col3 {
+  margin-right: 10px;
+}
+
+.column h2,
+.column p {
+  font-size: 1em;
+  margin: 5px 0;
+}
+
+@media (min-width: 768px) {
+  .column h2 {
+    font-size: 1.5em;
+  }
+}
+
+
+/* NEWS GALLERY */
+
+
+.newsrow {
+  margin-right: .5%;
+  margin-left: .5%;
+  margin-top: 30%;
+  margin-bottom: 30%;
+  padding: 0;
+  background-color: black;
+  text-align: center;
+  padding: 20px 0;
+  
+}
+
+.newsrow h2 {
+  font-family: 'Silkscreen', cursive;
+  color: white;
+  margin-bottom: 10px;
+}
+
+/* gallery-container within newsrow */
+.gallery-container {
+  max-width: 100%;
+  overflow: hidden;
+  text-align: center;
+}
+
+.gallery-image {
+  margin: 0;
+  padding: 0;
+  align-items: flex-start;
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  object-fit: cover;
+  width: 100%;
+  height: 100%; 
+}
+
+.gallery-image img {
+  height: 200px;
+  width: 300px;
+  transform: scale(1.0);
+  transition: transform 0.4s ease;
+}
+
+.gallery-image a:target img {
+  width: 600px;
+}
+
+.img-box {
+  box-sizing: border-box;
+  margin: 10px;
+  height: 200px;
+  width: 300px;
+  overflow: hidden;
+  display: inline-block;
+  color: white;
+  position: relative;
+  background-color: white;
+}
+
+.caption {
+  position: absolute;
+  bottom: 5px;
+  left: 20px;
+  opacity: 0.0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.transparent-box {
+  height: 250px;
+  width: 350px;
+  background-color: rgba(0, 0, 0, 0);
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: background-color 0.3s ease;
+}
+
+.img-box:hover img {
+  transform: scale(1.1);
+}
+
+.img-box:hover .transparent-box {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.img-box:hover .caption {
+  transform: translateY(-20px);
+  opacity: 1.0;
+}
+
+.img-box:hover {
+  cursor: pointer;
+}
+
+.caption>p:nth-child(2) {
+  font-size: 0.8em;
+}
+
+.opacity-low {
+  opacity: 0.5;
+}
+
+/* OVERLAY */
+
+#overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.8);
+  display: none; /* Hide until it's clicked */
+  justify-content: center;
+  align-items: center;
+}
+
+.overlay-nav {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  color: white;
+  font-size: 2em;
+  user-select: none;
+}
+
+.overlay-nav:hover {
+  color: #ddd;
+}
+
+.overlay-content {
+  position: relative;
+  text-align: center;
+}
+
+
+
+
+/* FOOTER TERRITORY*/
+
+
+footer {
+  margin-top: 10px;
+  background-color: black;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  font-size: small;
+  font-family: 'Silkscreen', cursive;
+}
+
+.footer-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.social-media-links {
+  margin-top: 10px;
+}
+
+.social-media-links a {
+  margin-right: 15px;
+  font-size: 24px;
+  color: white;
+  text-decoration: none;
+}
+
+.social-icon {
+  width: 30px;
+  height: 30px;
+}
+
+/*contact form */
+
+.contact-form {
+  max-width: 500px;
+  margin: 50px auto;
+  margin-top: 150px;
+  padding: 20px 50px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-family: 'Silkscreen', cursive;
+}
+input[type="text"], input[type="email"], textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+button {
+  display: block; 
+  margin-left: auto;  
+  margin-right: auto; 
+  padding: 10px 20px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: 'Silkscreen', cursive;
+}
+
+button:hover {
+  background-color: orangered;
+}
+
+#charCount {
+  font-size: 12px;
+  color: gray;
+}
+
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+/* Artist Pages */
+
+.jenvideo {
+  margin-top: 2%; 
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  text-align:center;
+}
+
+.headerjen {
+  text-align: center;
+  font-family: 'Young Serif', serif;
+}
+
+#jenheadercontainer {
+    align-items: center;
+    margin-left: auto;
+    margin-bottom: 2%
+}
+
+.jenbanner {
+  max-width: 100%;
+  height: 95vh;
+  margin-left: 13%;
+  margin-top: 13%;
+
+}
+
+iframe[src^="https://open.spotify.com/embed/"] {
+max-height: 300px;
+margin-left: auto;
+margin-top: 5%;
+}
+
+
+
+.bandbanner{
+  width: 100%;
+  min-height: 100%;
+  object-fit: cover; 
+  object-position: center;
+  display: block;
+  width: 975px; 
+  height: 300px;  
+  overflow: hidden; 
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.shadow-textbox {
+  padding: 20px;                    
+  background-color: #ffffff;       
+  border: 1px solid #e0e0e0;       
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);  
+  border-radius: 4px;              
+  max-width: 520px;
+  height: auto;
+  margin-top: 5%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 5%;
+  font-family: 'Young Serif', serif;       
+}
+
+.shadow-textbox2 {
+  padding: 20px;                    
+  background-color: #ffffff;       
+  border: 1px solid #e0e0e0;       
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);  
+  border-radius: 4px;              
+  max-width: 520px;
+  height: auto;
+  margin-top: 5%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 5%;
+  font-family: 'Young Serif', serif;       
+}
+
+.content-container {
+  display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: start;
+}
+
+/* Style for the image modal */
+.image-modal {
+  display: none;
+  background-color: rgba(0,0,0,0.9);
+}
+
+#imageModal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1000; /* Sit on top of all other content */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  background-color: rgba(0, 0, 0, 0.5); /* Black with a slight opacity */
+}
+
+#imageModalImage {
+  /* Removed width: 60%; so it can potentially be larger based on height */
+  width: 60%; /* Allow the image to be up to 90% of the viewport width */
+  height: auto; /* Allow the image to be up to 90% of the viewport height */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  object-fit: contain;
+}
+
+
+.image-modal-content {
+  width: 100%;
+  max-width: 100%;
+  height: 100%;
+  max-height: 100%;
+}
+
+.image-close {
+
+  position: absolute;
+  top: 8%; /* Adjust this value to move it up or down */
+  right: 18%; /* Adjust this value to move it left or right */
+  cursor: pointer; /* Changes the mouse cursor to a hand when hovering over the close button */
+  font-size: 24px; /* Adjust for your preferred size */
+  color: #FFF; /* Change to your preferred color */
+  background-color: rgba(0, 0, 0, 0.5); /* Optional: adds a slightly transparent background for visibility */
+  padding: 5px 10px; /* Optional: adds some space around the "X" for better appearance and usability */
+  border-radius: 5px;
+}
+
+.product-details {
+  display: flex;
+  align-items: center; /* vertically aligns the items in the middle */
+  gap: 20px; /* adds some space between the elements */
+  margin-top: 20px; /* adds space above the size selector and button */
+}
+
+.buy-now {
+  background-color: #FF4500; /* adjust color as needed */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s;
+}
+
+.buy-now:hover {
+  background-color: #FF6347; /* adjust to a slightly different color for hover effect */
+}
+
+
+.payment-modal {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow-y: auto;
+  background-color: rgba(0,0,0,0.4);
+}
+
+.payment-modal-content {
+  position: relative;
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 40%;
+}
+
+.payment-close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.payment-close:hover,
+.payment-close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+

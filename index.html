@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crooked Gentleman Records</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="Images\favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+    <link href="CSS/styles.css" rel="stylesheet" type="text/css">
+    <script src="JS\script.js" defer></script>
+</head>
+
+<body>
+    <!-- Navigation bar -->
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <div class="dropdown">
+            <button class="dropbtn">Artists
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="thevoles.html">The Voles</a>
+                <a href="alexanderthebard.html">AlexanderTheBard</a>
+                <a href="jensmotioncontrol.html">Jens Motion Control</a>
+            </div>
+        </div>
+        <a href="merch.html">Merch</a>
+        <a href="contact.html">Contact</a>
+    </div>
+    <!--Header-->
+    <div id="header-container">
+        <div class="headermain">
+            <h1>CROOKED</h1>
+            <h1>GENTLEMAN</h1>
+            <h1>RECORDS</h1>
+        </div>
+        <video autoplay loop muted class="banner">
+            <source src="Images\banner2.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
+    <!--Artist Row-->
+    <div class="row">
+        <div class="column col1">
+            <a href="thevoles.html">
+                <h2>The Voles</h2>
+                <img src="Images\Voles.jpg" class="imageformat">
+            </a>
+        </div>        
+        <div class="column col2">
+            <a href="alexanderthebard.html">
+                <h2>Alexander The Bard</h2>
+                <img src="Images\Alexthebard.jpg" class="imageformat">
+            </a>
+        </div>
+        <div class="column col3">
+            <a href="jensmotioncontrol.html">
+                <h2>Jens Motion Control</h2>
+                <img src="Images\Jens.jpg" class="imageformat">
+            </a>
+        </div>
+    </div>
+
+    <!--Theme Video-->
+    <div class="jenvideo">
+        <iframe width="975" height="600" src="https://www.youtube.com/embed/XCTu3AUlWSc?si=BsBA04sLomq0gI_2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+    </div>
+    <!--Gallery Row-->
+    <div class="newsrow">
+        <h2>Crooked Gallery<h2>
+        <div class="gallery-image">
+            <!-- Image 1 -->
+            <div class="img-box">
+                <img src="Images\Voles1.jpg" alt=""
+                    onclick="showOverlay(this.src, 'Description for Voles1 image')"onclick="openImageModal(this)">/>
+                <div class="transparent-box">
+                    <div class="caption">
+                        <p class="opacity-low">Smash</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Image 2 -->
+            <div class="img-box">
+                <img src="Images\Voles2.jpg" alt=""
+                    onclick="showOverlay(this.src, 'Description for Voles2 image')" />
+                <div class="transparent-box">
+                    <div class="caption">
+                        <p class="opacity-low">GizzyLocal</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Image 3 -->
+            <div class="img-box">
+                <img src="Images\voles3.jpg" alt=""
+                    onclick="showOverlay(this.src, 'Description for voles3 image')" />
+                <div class="transparent-box">
+                    <div class="caption">
+                        <p class="opacity-low">SMFRQ</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Image 4 -->
+            <div class="img-box">
+                <img src="Images\jens1.jpg" alt=""
+                    onclick="showOverlay(this.src, 'Description for jens1 image')" />
+                <div class="transparent-box">
+                    <div class="caption">
+                        <p class="opacity-low">Hiatus</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Overlay -->
+    <div id="overlay" onclick="closeOverlay()">
+        <span class="overlay-nav" onclick="changeImage(-1)">&#10094;</span> <!-- Previous button -->
+        <div class="overlay-content">
+            <img id="overlay-image" src="" alt="Gallery Image">
+            <p id="overlay-text"></p>
+        </div>
+        <span class="overlay-nav" onclick="changeImage(1)">&#10095;</span> <!-- Next button -->
+    </div>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2023 Crooked Gentleman Records</p>
+            <div class="social-media-links">
+                <a href="https://www.facebook.com/your-facebook-page" target="_blank">
+                    <img src="Images\Youtube.png" alt="Youtube" class="social-icon">
+                </a>
+                <a href="https://twitter.com/your-twitter-account" target="_blank">
+                    <img src="Images\Twitter.png" alt="Twitter" class="social-icon">
+                </a>
+                <a href="https://www.instagram.com/crookedgentlemanrec" target="_blank">
+                    <img src="Images\Instagram.png" alt="Instagram" class="social-icon">
+                </a>
+            </div>
+        </div>
+    </footer>
+
+
+</body>
+
+</html>

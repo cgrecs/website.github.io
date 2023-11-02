@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="icon" type="image/png" sizes="16x16" href="Images\favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+    <link href="CSS/styles.css" rel="stylesheet" type="text/css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <!-- Navigation bar -->
+    <div class="navbar">
+        <a href="index.html">Home</a>
+        <div class="dropdown">
+            <button class="dropbtn">Artists
+                <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content">
+                <a href="thevoles.html">The Voles</a>
+                <a href="alexanderthebard.html">AlexanderTheBard</a>
+                <a href="jensmotioncontrol.html">Jens Motion Control</a>
+            </div>
+        </div>
+        <a href="merch.html">Merch</a>
+        <a href="contact.html">Contact</a>
+    </div>
+    
+    <div class="contact-form">
+        <h2 class="black-text">Contact Us</h2>
+        <form action="/submit_contact" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            
+            <label for="subject">Subject:</label>
+            <input type="text" id="subject" name="subject">
+            
+            <label for="message">Message:</label>
+            <textarea id="message" name="message" rows="6" required maxlength="300"></textarea>
+            <div id="charCount">300 characters remaining</div>
+            <script>
+                document.getElementById('message').addEventListener('input', function() {
+                    const maxLength = 300;
+                    const currentLength = this.value.length;
+                    const charsRemaining = maxLength - currentLength;
+                    document.getElementById('charCount').innerText = charsRemaining + " characters remaining";
+                });
+            </script>
+            
+
+            
+            <!-- Trigger/Open The Modal -->
+            <button type="button" id="myBtn">Submit</button>
+
+            <!-- The Modal -->
+            <div id="myModal" class="modal">
+
+                <!-- Modal content -->
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <p>Thank you for your message, we will respond as soon as possible</p>
+                </div>
+
+                </div>
+                        </form>
+                    </div>
+                    <script src="JS\script.js" defer></script>
+
+<footer>
+    <div class="footer-content">
+        <p>&copy; 2023 Crooked Gentleman Records</p>
+        <div class="social-media-links">
+            <a href="https://www.facebook.com/your-facebook-page" target="_blank">
+                <img src="E:\Website Development\Assignment1\Images\Youtube.png" alt="Youtube" class="social-icon">
+            </a>
+            <a href="https://twitter.com/your-twitter-account" target="_blank">
+                <img src="E:\Website Development\Assignment1\Images\Twitter.png" alt="Twitter" class="social-icon">
+            </a>
+            <a href="https://www.instagram.com/crookedgentlemanrec" target="_blank">
+                <img src="E:\Website Development\Assignment1\Images\Instagram.png" alt="Instagram" class="social-icon">
+            </a>
+        </div>
+    </div>
+</footer>
+
+</body>
+
+</html>
+
